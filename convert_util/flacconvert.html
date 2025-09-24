@@ -1,0 +1,21 @@
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+function send_form(){
+	if(grecaptcha.getResponse() != "")
+	{
+		document.getElementById("upld").submit();
+	}
+	else
+	{
+		alert("Please solve the CAPTCHA!");
+	}
+}
+</script>
+
+<form action="upload.php" method="post" id="upld" enctype="multipart/form-data">
+  Convert AT9 -> FLAC
+  <input type="file" name="fileUpload" id="fileUpload">
+  <input type="hidden" name="continueTo" value="fromAt9">
+  <div class="g-recaptcha" data-sitekey="6LfbwrcZAAAAAPKXdRWseksJBtJJRhGgkyWXf1XU"></div>
+</form>
+<button onclick="send_form()">Convert to Flac</button>
