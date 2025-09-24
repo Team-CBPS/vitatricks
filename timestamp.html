@@ -1,0 +1,17 @@
+<script>
+d = (Date.now() + 62135596800000) * 1000
+document.write('<b><i><div id="currentStamp">Current Playstation Timestamp: tt</div></b></i>')
+document.write('<b>Timestamp:</b><br><input type="text" id="timestamp" value='+d.toString(16)+'>');
+document.write('<div id="stamp">test</div>');
+function writeTime()
+{
+d = (Date.now() + 62135596800000) * 1000
+document.getElementById('currentStamp').innerHTML = "Current Playstation Timestamp: "+d.toString(16);
+timestamp = parseInt(document.getElementById('timestamp').value, 16) / 1000
+date = new Date((timestamp - 62135596800000))
+document.getElementById('stamp').innerHTML = date.toUTCString();
+setTimeout(writeTime, 0);
+}
+writeTime();
+
+</script>

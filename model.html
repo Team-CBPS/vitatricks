@@ -1,0 +1,43 @@
+<h1><b>I know what model psvita you have</b></h1>
+Enter mac address
+<input id="mac"></input>
+<br>
+<div id="model">Unknown model PSVITA (JS Disabled)</div>
+<script>
+function getMac()
+{
+    setTimeout(getMac, 0);
+
+    if(navigator.platform == "PlayStation Vita")
+    {
+    firmware = navigator.userAgent.substring(navigator.userAgent.indexOf("PlayStation Vita ")+17)
+    firmware = firmware[0]+firmware[1]+firmware[2]+firmware[3]
+    }
+    else
+    {
+    firmware = ""
+    }
+
+    macaddr = mac.value.toUpperCase();
+    if(macaddr === undefined){macaddr = "";};
+
+    if(macaddr.indexOf("D4:4B:5E") == 0)
+    {
+        document.getElementById('model').innerHTML = "PSVITA 1000 "+firmware;
+    }
+    else if(macaddr.indexOf("00:71:CC") == 0)
+    {
+        document.getElementById('model').innerHTML= "PSVITA 2000 "+firmware;
+    }
+    else if(macaddr.indexOf("F8:2F:A8") == 0)
+    {
+        document.getElementById('model').innerHTML= "PSVITA 2000 "+firmware;
+    }
+    else
+    {
+        document.getElementById('model').innerHTML= "Unknown model PSVITA "+firmware;
+    }
+}
+setTimeout(getMac, 0);
+</script>
+

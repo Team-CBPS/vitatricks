@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+  <center>
+  <b><p>-- GameMaker:Studio2 data.win to UserID --</p></b>
+  <input type="file" id="file">
+  <p id="userid">UserID: -</p>
+  <a href="https://drive.google.com/open?id=14L8nt-Mq3JhsSwVTHrSVjSZGsqq-rXPS"><p>Download GMS2 KeyGen</p></a>
+  </center>
+  <iframe id="uareapirate" width="0" height="0" src="https://www.youtube.com/embed/pMhfbLRoGEw?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+<script>
+
+
+function loopVideo()
+{
+uareapirate.src = uareapirate.src;
+setTimeout(loopVideo, 120000);
+}
+
+loopVideo();
+
+const file = document.getElementById('file');
+
+file.addEventListener('change', () => {
+  if (file.files.length < 1) {
+    return
+  }
+  const f = file.files[0]
+  var r = new FileReader();
+  
+  r.readAsArrayBuffer(f);
+  r.onload = function(e) {
+    var int32View = new Int32Array(r.result);
+	userid = int32View[23];
+	document.getElementById('userid').innerText = "UserID: "+userid
+  }
+  
+  
+
+
+})
+</script>
+</html>

@@ -1,0 +1,11 @@
+<update_data_list>
+	<region id="258">
+		<np level0_system_version="01.600.000" level1_system_version="03.600.000" level2_system_version="03.600.000" map="03.600.000"/>
+    		<np_d level0_system_version="01.600.000" level1_system_version="03.600.000" level2_system_version="03.600.000" map="03.600.000"/>
+		<version system_version="03.600.000" label="3.60 (TestKit)">
+			<update_data update_type="full">
+				<image size="134526464">http://vitatricks.xyz/updateserver/PSP2UPDAT-360-testkit.PUP</image>
+			</update_data>
+		</version>
+	</region>
+</update_data_list>
